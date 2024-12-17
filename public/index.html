@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-Postman</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="postman">
+    <div class="saved-methods w-100"></div>
+
+    <div class="method-list w-100">
+
+        <div class="request d-flex">
+            <div class="req-method">
+                <h4>Метод</h4>
+                <select class="w-100" id="http-method">
+                    <option value="" disabled selected>Выберите тип запроса</option>
+                    <option value="GET">GET</option>
+                    <option value="POST">POST</option>
+                    <option value="PUT">PUT</option>
+                </select>
+            </div>
+            <div class="req-url">
+                <h4>URL</h4>
+                <input id="req-url" class="w-100" type="text" placeholder="https://example.com">
+            </div>
+        </div>
+
+        <div class="req-body">
+            <h4>Тело запроса</h4>
+            <textarea id="req-body" class="w-100" rows="3" placeholder="Тело запроса"></textarea>
+        </div>
+        <div class="req-params">
+            <h4>Параметры запроса</h4>
+            <div class="params"></div>
+            <button id="add-param" class="request-btn add-btn">Добавить</button>
+        </div>
+        <div class="req-headers">
+            <h4>Заголовки запроса</h4>
+            <div class="headers"></div>
+            <button id="add-header" class="request-btn add-btn">Добавить</button>
+        </div>
+        <div class="action-btns">
+            <button id="save">Сохранить запрос</button>
+            <button id="submit">Отправить запрос</button>
+            <button id="clean">Очистить форму</button>
+        </div>
+        <div class="response"></div>
+        <div class="loading">
+            <div class="spinner"></div>
+        </div>
+    </div>
+    
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
